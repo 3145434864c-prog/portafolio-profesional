@@ -4715,3 +4715,100 @@ img.u-pull-left {
         width  : var(--vspace-1_5);
     }
 }
+
+:root {
+  --accent-1: #dc3545;   /* rojo */
+  --accent-2: #bd5d38;   /* naranja */
+  --dark: #343a40;
+  --muted: #ffffff;
+}
+.s-header__social {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.s-header__social a {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    color: var(--muted);
+    border-radius: 50%;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.s-header__social a:hover {
+    background: linear-gradient(
+        135deg,
+        var(--accent-1),
+        var(--accent-2)
+    );
+    color: #fff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+.s-footer__social i {
+    font-size: 1.6rem; /* tamaño ideal */
+    line-height: 1;
+}
+.s-footer__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.s-footer__social a:hover {
+    transform: translateY(-3px);
+}
+
+.s-footer__social a:hover i {
+    transform: scale(1.15);
+}
+
+:root {
+    --whatsapp-offset-bottom: 13rem;
+}
+
+.whatsapp-float {
+    bottom: var(--whatsapp-offset-bottom);
+}
+
+
+/* WhatsApp Floating Button Styles */
+.whatsapp-float {
+    position: fixed;
+    bottom: 14rem; 
+    right: 4rem;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-float i {
+    line-height: 1;
+}

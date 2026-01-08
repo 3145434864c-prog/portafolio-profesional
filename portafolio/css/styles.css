@@ -11124,3 +11124,132 @@ section.resume-section .resume-section-content {
     transform: scale(1.15);
 }
 
+/* ===== Knowledge Cards (Bootstrap Palette) ===== */
+
+:root {
+    --bs-red: #dc3545;
+    --bs-orange: #bd5d38;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.6rem;
+}
+
+.knowledge-card {
+    background: var(--bs-gray-dark);
+    border-radius: 18px;
+    padding: 1.6rem 1.4rem;
+    text-align: center;
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea decorativa superior */
+.knowledge-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--bs-red),
+        var(--bs-orange)
+    );
+    opacity: 0.85;
+}
+
+.knowledge-card i {
+    font-size: 2.3rem;
+    margin-bottom: 0.9rem;
+    color: var(--bs-orange);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.knowledge-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.55rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.knowledge-card p {
+    font-size: 0.9rem;
+    color: var(--bs-gray);
+    line-height: 1.45;
+}
+
+/* Hover elegante */
+.knowledge-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+    border-color: rgba(220, 53, 69, 0.4);
+}
+
+.knowledge-card:hover i {
+    transform: scale(1.15);
+    color: var(--bs-red);
+}
+
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 6rem;
+    right: 4rem;
+    width: 60px;
+    height: 60px;
+
+    background-color: #25d366;
+    color: #ffffff;
+
+    border-radius: 50%;
+    border: none;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 28px;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+
+    z-index: 1000;
+
+    /* Elimina efectos raros del navegador */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover */
+.whatsapp-float:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.12);
+    box-shadow: 0 8px 24px rgba(30, 190, 93, 0.45);
+}
+
+/* Focus / Active (MUY IMPORTANTE) */
+.whatsapp-float:focus,
+.whatsapp-float:active,
+.whatsapp-float:visited {
+    background-color: #1ebe5d;
+    color: #ffffff;
+    outline: none;
+    box-shadow: 0 8px 24px rgba(30, 190, 93, 0.45);
+}
+
+/* Icono */
+.whatsapp-float i {
+    line-height: 1;
+    pointer-events: none;
+}
+
