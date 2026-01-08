@@ -11006,3 +11006,121 @@ section.resume-section .resume-section-content {
                 box-shadow: 0 2px 10px rgba(242, 101, 34, 0.4);
                 background:  #212529;
             }
+
+          /* ===============================
+   Skills Marquee – Final Version
+   =============================== */
+
+.skills-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* Track animado */
+.skills-track {
+    display: flex;
+    width: max-content;
+    animation: skills-marquee 35s linear infinite;
+    will-change: transform;
+}
+
+/* Lista de iconos */
+.dev-icons {
+    display: flex;
+    align-items: center;
+    gap: 2.75rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Contenedor visual de cada icono */
+.dev-icons li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+}
+
+/* Iconos Font Awesome y SVG */
+.dev-icons i,
+.dev-icons svg {
+    font-size: 3.2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    color: #6c757d;              /* gris profesional */
+    opacity: 0.85;
+    filter: grayscale(100%);
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease,
+        filter 0.35s ease,
+        opacity 0.35s ease;
+}
+
+/* Hover moderno */
+.dev-icons i:hover,
+.dev-icons svg:hover {
+    transform: scale(1.2);
+    color: #0d6efd;              /* Bootstrap primary */
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Animación infinita */
+@keyframes skills-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausa al hover */
+.skills-marquee:hover .skills-track {
+    animation-play-state: paused;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .skills-track {
+        animation: none;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive – mobile */
+@media (max-width: 768px) {
+    .dev-icons {
+        gap: 2rem;
+    }
+
+    .dev-icons li {
+        width: 52px;
+        height: 52px;
+    }
+
+    .dev-icons i,
+    .dev-icons svg {
+        font-size: 2.6rem;
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
+
+.skill-svg {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.skill-svg:hover {
+    transform: scale(1.15);
+}
+
