@@ -11253,3 +11253,100 @@ section.resume-section .resume-section-content {
     pointer-events: none;
 }
 
+
+/* targetas de certificados */
+:root {
+    --main-orange: #bd5d38;
+    --gray-dark: #343a40;
+    --btn-gray: #6c757d;
+    --white: #fff;
+    --black: #000;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.cert-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.cert-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+}
+
+.cert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.cert-card h3 {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+.cert-date {
+    font-size: 0.85rem;
+    color: var(--main-orange);
+    font-weight: 600;
+}
+
+.cert-card p {
+    color: var(--black);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.btn-cert {
+    background-color: var(--btn-gray);
+    color: var(--white);
+    padding: 0.55rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-cert:hover {
+    background-color: var(--gray-dark);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+}
+
+#Promedio{
+ color: #bd5d38;
+}

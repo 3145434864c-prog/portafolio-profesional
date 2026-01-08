@@ -32,3 +32,29 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// Abrir los certificados en nueva pestaña de forma segura
+document.querySelectorAll('.btn-cert').forEach(button => {
+    button.addEventListener('click', e => {
+        e.preventDefault(); // evita comportamiento por defecto del <a>
+        e.stopPropagation(); // evita que el click suba a la tarjeta
+        const url = button.href; // usa directamente el href del botón
+        window.open(url, '_blank', 'noopener,noreferrer');
+    });
+});
+
+// Animación al hacer scroll usando IntersectionObserver
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.2 });
+
+// Configurar variables de animación y observar cada tarjeta
+document.querySelectorAll('.cert-card').forEach((card, i) => {
+    card.style.setProperty('--i', i);
+    observer.observe(card);
+});
