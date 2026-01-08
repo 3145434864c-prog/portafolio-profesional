@@ -1,4 +1,5 @@
-![Banner](./portafolio_img.png)
+![Banner](./banner-portafolio.png)
+
 
 
 
