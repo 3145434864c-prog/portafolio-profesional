@@ -1,3 +1,4 @@
-![Banner](./Presentación de portafolio creativo elegante rojo.png)
+![Banner](./portafolio_img.png)
+
 
 
