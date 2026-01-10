@@ -380,7 +380,7 @@
                             <article class="brick entry">
                                 <a href="#modal-04" class="entry__link">
                                     <div class="entry__thumb">
-                                        <img src="images/APIREST.png" alt="">
+                                        <img src="images/APIREST.JPG" alt="">
                                     </div>
                                     <div class="entry__info">
                                         <div class="entry__cat">API REST</div>
@@ -394,7 +394,7 @@
                             <article class="brick entry">
                                 <a href="#modal-05" class="entry__link">
                                     <div class="entry__thumb">
-                                        <img src="images/inventario (1).png" alt="">
+                                        <img src="images/inventario (1).jpg" alt="">
                                     </div>
                                     <div class="entry__info">
                                         <div class="entry__cat">Sistema de Gestión de Inventarios</div>
@@ -454,7 +454,7 @@
 
                 <div id="modal-04" hidden>
                     <div class="modal-popup">
-                        <img src="images/APIREST.png" alt="">
+                        <img src="images/APIREST.JPG" alt="">
 
                         <div class="modal-popup__desc">
                             <h5>API REST con PHP 8</h5>
@@ -472,7 +472,7 @@
 
                 <div id="modal-05" hidden>
                     <div class="modal-popup">
-                        <img src="images/inventario (1).png" alt="">
+                        <img src="images/inventario (1).jpg" alt="">
 
                         <div class="modal-popup__desc">
                             <h5>Sistema de Gestión de Inventarios – NUVA S.A.S.</h5>
@@ -509,7 +509,7 @@
 
             <div class="row">
                 <div class="column lg-12">
-                    <img src="images/Presentaciónportafolio.png" alt="Presentación Portafolio"
+                    <img src="images/Presentaciónportafolio.webp" alt="Presentación Portafolio"
                         style="width: 100%; height: auto; display: block;">
                 </div>
             </div>
@@ -588,14 +588,22 @@
     ================================================== -->
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+  defer
+></script>
+
+
+        
 
         <script>
-            (function () {
-                emailjs.init("w3DQ0PdTs36TvtWHV");
-            })();
+            document.addEventListener("DOMContentLoaded", () => {
+    emailjs.init({
+        publicKey: "w3DQ0PdTs36TvtWHV",
+    });
+});
+
 
             const form = document.getElementById("contact-form");
             let sending = false;

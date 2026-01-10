@@ -4716,6 +4716,20 @@ img.u-pull-left {
     }
 }
 
+/* Improve visibility of go-to-top button on mobile devices */
+@media screen and (max-width: 600px) {
+    .ss-go-top a {
+        height : 5rem;
+        width  : 5rem;
+        box-shadow : 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .ss-go-top svg {
+        height : 2rem;
+        width  : 2rem;
+    }
+}
+
 :root {
   --accent-1: #dc3545;   /* rojo */
   --accent-2: #bd5d38;   /* naranja */
