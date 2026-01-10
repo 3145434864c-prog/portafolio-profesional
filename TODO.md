@@ -1,4 +1,0 @@
-- [x] Mejorar el texto del modal-01 (Landing page NUVA): Reemplazar Lorem Ipsum con descripción detallada basada en el contexto del proyecto.
-- [x] Mejorar el texto del modal-02 (Sistema de finanzas personales): Reemplazar Lorem Ipsum con descripción detallada del sistema de gestión financiera con Laravel.
-- [x] Revisar y ajustar categorías de los modales si es necesario para que coincidan con el contenido.
-- [x] Verificar que todos los textos sean coherentes y estén en español, alineados con el resto del sitio.
