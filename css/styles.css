@@ -4894,3 +4894,22 @@ img.u-pull-left {
     border-color: var(--color-1);
     color: var(--color-1);
 }
+
+
+.list-block__icon {
+    color: #e74c3c; /* tu naranja de marca */
+}
+
+.list-block__icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.list-block__item:hover .list-block__icon {
+    color: #e23a28; /* naranja más claro */
+}
+
+.list-block__item:hover .list-block__icon svg {
+    transform: scale(1.08);
+    transition: all 0.25s ease;
+}

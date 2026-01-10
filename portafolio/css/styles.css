@@ -11350,3 +11350,65 @@ section.resume-section .resume-section-content {
 #Promedio{
  color: #bd5d38;
 }
+
+/* --------------------------------------------------------------------
+ * ## Futuristic Scroll Indicator
+ * -------------------------------------------------------------------- */
+.s-intro__scroll-down {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    z-index: 5;
+}
+
+/* Contenedor */
+.scroll-indicator {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+}
+
+/* Texto */
+.scroll-text {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    color: #e05a1f;
+    opacity: .85;
+    transition: opacity .3s ease;
+}
+
+/* Flecha futurista */
+.scroll-arrow {
+    position: relative;
+    width: 42px;
+    height: 1px;
+    background-color: #e05a1f;
+}
+
+/* Punta */
+.scroll-arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid #e05a1f;
+    border-bottom: 1px solid #e05a1f;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Hover futurista */
+.scroll-indicator:hover .scroll-text {
+    opacity: 1;
+}
+
+.scroll-indicator:hover .scroll-arrow {
+    transform: translateX(6px);
+    transition: transform .3s ease;
+}
