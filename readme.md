@@ -1,4 +1,6 @@
-![Banner](./banner-portafolio.png)
+![Banner del portafolio](images/Presentaciónportafolio.webp)
+
+
 
 
 
